@@ -8,18 +8,18 @@ import {
   Setting,
 } from "obsidian";
 
-// Remember to rename these classes and interfaces!
+// TODO: Remember to rename these classes and interfaces!
 
-interface MyPluginSettings {
+interface MyFeaturePluginSettings {
   mySetting: string;
 }
 
-const DEFAULT_SETTINGS: MyPluginSettings = {
+const DEFAULT_SETTINGS: MyFeaturePluginSettings = {
   mySetting: "default",
 };
 
-export default class MyPlugin extends Plugin {
-  settings: MyPluginSettings = DEFAULT_SETTINGS;
+export default class MyFeaturePlugin extends Plugin {
+  settings: MyFeaturePluginSettings = DEFAULT_SETTINGS;
 
   override async onload() {
     await this.loadSettings();
@@ -80,7 +80,7 @@ export default class MyPlugin extends Plugin {
     });
 
     // This adds a settings tab so the user can configure various aspects of the plugin
-    this.addSettingTab(new SampleSettingTab(this.app, this));
+    this.addSettingTab(new MyFeatureSettingTab(this.app, this));
 
     // If the plugin hooks up any global DOM events (on parts of the app that doesn't belong to this plugin)
     // Using this function will automatically remove the event listener when this plugin is disabled.
@@ -122,10 +122,10 @@ class SampleModal extends Modal {
   }
 }
 
-class SampleSettingTab extends PluginSettingTab {
-  plugin: MyPlugin;
+class MyFeatureSettingTab extends PluginSettingTab {
+  plugin: MyFeaturePlugin;
 
-  constructor(app: App, plugin: MyPlugin) {
+  constructor(app: App, plugin: MyFeaturePlugin) {
     super(app, plugin);
     this.plugin = plugin;
   }
