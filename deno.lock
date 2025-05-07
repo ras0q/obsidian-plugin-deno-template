@@ -1,82 +1,72 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@deno/cache-dir@0.8": "0.8.0",
-    "jsr:@deno/emit@0.45.0": "0.45.0",
-    "jsr:@deno/graph@~0.69.7": "0.69.10",
-    "jsr:@std/assert@0.223": "0.223.0",
-    "jsr:@std/assert@~0.218.2": "0.218.2",
-    "jsr:@std/bytes@~0.218.2": "0.218.2",
-    "jsr:@std/fmt@~0.218.2": "0.218.2",
-    "jsr:@std/fs@~0.218.2": "0.218.2",
-    "jsr:@std/io@~0.218.2": "0.218.2",
-    "jsr:@std/path@0.223": "0.223.0",
-    "jsr:@std/path@~0.218.2": "0.218.2",
+    "jsr:@david/dax@0.43": "0.43.0",
+    "jsr:@david/path@0.2": "0.2.0",
+    "jsr:@david/which@~0.4.1": "0.4.1",
+    "jsr:@std/bytes@^1.0.2": "1.0.2",
+    "jsr:@std/fmt@1": "1.0.2",
+    "jsr:@std/fs@1": "1.0.4",
+    "jsr:@std/io@0.225": "0.225.0",
+    "jsr:@std/path@1": "1.0.9",
+    "jsr:@std/path@^1.0.6": "1.0.9",
+    "jsr:@std/path@^1.0.9": "1.0.9",
     "npm:esbuild@0.24.0": "0.24.0",
-    "npm:obsidian@1.7.2": "1.7.2_@codemirror+state@6.4.1_@codemirror+view@6.34.1"
+    "npm:obsidian@1.7.2": "1.7.2_@codemirror+state@6.5.2_@codemirror+view@6.36.6"
   },
   "jsr": {
-    "@deno/cache-dir@0.8.0": {
-      "integrity": "e87e80a404958f6350d903e6238b72afb92468378b0b32111f7a1e4916ac7fe7",
+    "@david/dax@0.43.0": {
+      "integrity": "72068d3b9eb00c08d70d0d1e2db8872402377279a0e6c88df172112eee1357f1",
       "dependencies": [
-        "jsr:@deno/graph",
+        "jsr:@david/path",
+        "jsr:@david/which",
         "jsr:@std/fmt",
         "jsr:@std/fs",
         "jsr:@std/io",
-        "jsr:@std/path@~0.218.2"
+        "jsr:@std/path@1"
       ]
     },
-    "@deno/emit@0.45.0": {
-      "integrity": "b59d632e61dbe4be7e9e61235f02ad08ff124c714c31deb080c4de778da1894d",
+    "@david/path@0.2.0": {
+      "integrity": "f2d7aa7f02ce5a55e27c09f9f1381794acb09d328f8d3c8a2e3ab3ffc294dccd",
       "dependencies": [
-        "jsr:@deno/cache-dir",
-        "jsr:@std/path@0.223"
+        "jsr:@std/fs",
+        "jsr:@std/path@1"
       ]
     },
-    "@deno/graph@0.69.10": {
-      "integrity": "38fe22ac5686f6ece5daeec5a4df65c6314d7d32adcc33f77917a13cfaffa26f"
+    "@david/which@0.4.1": {
+      "integrity": "896a682b111f92ab866cc70c5b4afab2f5899d2f9bde31ed00203b9c250f225e"
     },
-    "@std/assert@0.218.2": {
-      "integrity": "7f0a5a1a8cf86607cd6c2c030584096e1ffad27fc9271429a8cb48cfbdee5eaf"
+    "@std/bytes@1.0.2": {
+      "integrity": "fbdee322bbd8c599a6af186a1603b3355e59a5fb1baa139f8f4c3c9a1b3e3d57"
     },
-    "@std/assert@0.223.0": {
-      "integrity": "eb8d6d879d76e1cc431205bd346ed4d88dc051c6366365b1af47034b0670be24"
+    "@std/fmt@1.0.2": {
+      "integrity": "87e9dfcdd3ca7c066e0c3c657c1f987c82888eb8103a3a3baa62684ffeb0f7a7"
     },
-    "@std/bytes@0.218.2": {
-      "integrity": "91fe54b232dcca73856b79a817247f4a651dbb60d51baafafb6408c137241670"
-    },
-    "@std/fmt@0.218.2": {
-      "integrity": "99526449d2505aa758b6cbef81e7dd471d8b28ec0dcb1491d122b284c548788a"
-    },
-    "@std/fs@0.218.2": {
-      "integrity": "dd9431453f7282e8c577cc22c9e6d036055a9a980b5549f887d6012969fabcca"
-    },
-    "@std/io@0.218.2": {
-      "integrity": "c64fbfa087b7c9d4d386c5672f291f607d88cb7d44fc299c20c713e345f2785f",
+    "@std/fs@1.0.4": {
+      "integrity": "2907d32d8d1d9e540588fd5fe0ec21ee638134bd51df327ad4e443aaef07123c",
       "dependencies": [
-        "jsr:@std/assert@~0.218.2",
+        "jsr:@std/path@^1.0.6"
+      ]
+    },
+    "@std/io@0.225.0": {
+      "integrity": "c1db7c5e5a231629b32d64b9a53139445b2ca640d828c26bf23e1c55f8c079b3",
+      "dependencies": [
         "jsr:@std/bytes"
       ]
     },
-    "@std/path@0.218.2": {
-      "integrity": "b568fd923d9e53ad76d17c513e7310bda8e755a3e825e6289a0ce536404e2662",
-      "dependencies": [
-        "jsr:@std/assert@~0.218.2"
-      ]
-    },
-    "@std/path@0.223.0": {
-      "integrity": "593963402d7e6597f5a6e620931661053572c982fc014000459edc1f93cc3989",
-      "dependencies": [
-        "jsr:@std/assert@0.223"
-      ]
+    "@std/path@1.0.9": {
+      "integrity": "260a49f11edd3db93dd38350bf9cd1b4d1366afa98e81b86167b4e3dd750129e"
     }
   },
   "npm": {
-    "@codemirror/state@6.4.1": {
-      "integrity": "sha512-QkEyUiLhsJoZkbumGZlswmAhA7CBU02Wrz7zvH4SrcifbsqwlXShVXg65f3v/ts57W3dqyamEriMhij1Z3Zz4A=="
+    "@codemirror/state@6.5.2": {
+      "integrity": "sha512-FVqsPqtPWKVVL3dPSxy8wEF/ymIEuVzF1PK3VbUgrxXpJUSHQWWZz4JMToquRxnkw+36LTamCZG2iua2Ptq0fA==",
+      "dependencies": [
+        "@marijn/find-cluster-break"
+      ]
     },
-    "@codemirror/view@6.34.1": {
-      "integrity": "sha512-t1zK/l9UiRqwUNPm+pdIT0qzJlzuVckbTEMVNFhfWkGiBQClstzg+78vedCvLSX0xJEZ6lwZbPpnljL7L6iwMQ==",
+    "@codemirror/view@6.36.6": {
+      "integrity": "sha512-uxugGLet+Nzp0Jcit8Hn3LypM8ioMLKTsdf8FRoT3HWvZtb9GhaWMe0Cc15rz90Ljab4YFJiAulmIVB74OY0IQ==",
       "dependencies": [
         "@codemirror/state",
         "style-mod",
@@ -155,14 +145,17 @@
     "@esbuild/win32-x64@0.24.0": {
       "integrity": "sha512-7IAFPrjSQIJrGsK6flwg7NFmwBoSTyF3rl7If0hNUFQU4ilTsEPL6GuMuU9BfIWVVGuRnuIidkSMC+c0Otu8IA=="
     },
+    "@marijn/find-cluster-break@1.0.2": {
+      "integrity": "sha512-l0h88YhZFyKdXIFNfSWpyjStDjGHwZ/U7iobcK1cQQD8sejsONdQtTVU+1wVN1PBw40PiiHB1vA5S7VTfQiP9g=="
+    },
     "@types/codemirror@5.60.8": {
       "integrity": "sha512-VjFgDF/eB+Aklcy15TtOTLQeMjTo07k7KAjql8OK5Dirr7a6sJY4T1uVBDuTVG9VEmn1uUsohOpYnVfgC6/jyw==",
       "dependencies": [
         "@types/tern"
       ]
     },
-    "@types/estree@1.0.6": {
-      "integrity": "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="
+    "@types/estree@1.0.7": {
+      "integrity": "sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ=="
     },
     "@types/tern@0.23.9": {
       "integrity": "sha512-ypzHFE/wBzh+BlH6rrBgS5I/Z7RD21pGhZ2rltb/+ZrVM1awdZwjx7hE5XfuYgHWk9uvV5HLZN3SloevCAp3Bw==",
@@ -202,7 +195,7 @@
     "moment@2.29.4": {
       "integrity": "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w=="
     },
-    "obsidian@1.7.2_@codemirror+state@6.4.1_@codemirror+view@6.34.1": {
+    "obsidian@1.7.2_@codemirror+state@6.5.2_@codemirror+view@6.36.6": {
       "integrity": "sha512-k9hN9brdknJC+afKr5FQzDRuEFGDKbDjfCazJwpgibwCAoZNYHYV8p/s3mM8I6AsnKrPKNXf8xGuMZ4enWelZQ==",
       "dependencies": [
         "@codemirror/state",
@@ -220,6 +213,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@david/dax@0.43",
       "npm:esbuild@0.24.0",
       "npm:obsidian@1.7.2"
     ]

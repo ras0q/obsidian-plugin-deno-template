@@ -1,9 +1,26 @@
 import esbuild from "esbuild";
+import $ from "@david/dax";
 
 const prod = Deno.args[0] === "production";
 
+const rootDir = $.path(import.meta.dirname!);
+const pluginName = rootDir.basename().replace(/^obsidian-?/, "");
+const vaultDir = rootDir.join(`vault-for-${pluginName}`);
+if (!vaultDir.existsSync()) {
+  await $`git clone --depth 1 https://github.com/kepano/kepano-obsidian.git ${vaultDir}`;
+  await $`echo ${vaultDir.basename()} >> .gitignore`;
+}
+
+const distDir = prod
+  ? rootDir.join("dist")
+  : vaultDir.join(".obsidian", "plugins", pluginName);
+if (!distDir.existsSync()) {
+  await $`mkdir -p ${distDir}`;
+}
+
 const context = await esbuild.context({
-  entryPoints: ["main.ts"],
+  entryPoints: ["main.ts", "styles.css", "manifest.json"],
+  outdir: distDir.toString(),
   bundle: true,
   external: [
     "obsidian",
@@ -25,8 +42,11 @@ const context = await esbuild.context({
   logLevel: "info",
   sourcemap: prod ? false : "inline",
   treeShaking: true,
-  outfile: "main.js",
   minify: prod,
+  loader: {
+    ".css": "copy",
+    ".json": "copy",
+  },
 });
 
 if (prod) {
