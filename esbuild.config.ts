@@ -44,6 +44,8 @@ const context = await esbuild.context({
   minify: prod,
 });
 
+await $`cp ./manifest.json ${distDir}/manifest.json`;
+
 if (prod) {
   await context.rebuild();
   Deno.exit(0);
