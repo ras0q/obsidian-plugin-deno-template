@@ -69,5 +69,5 @@ VSCode
 
 [Obsidian]: https://obsidian.md
 [Deno]: https://deno.com
-[obsidianmd/obsidian-sample-plugin]: https//github.com/obsidianmd/obsidian-sample-plugin
+[obsidianmd/obsidian-sample-plugin]: https://github.com/obsidianmd/obsidian-sample-plugin
 [sample vault]: https://github.com/kepano/kepano-obsidian
