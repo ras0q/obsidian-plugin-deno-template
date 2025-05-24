@@ -1,3 +1,4 @@
+import builtinModules from "builtin-modules";
 import esbuild from "esbuild";
 import $ from "@david/dax";
 
@@ -18,7 +19,7 @@ await $`rm -rf ${distDir}`;
 await $`mkdir -p ${distDir}`;
 
 const context = await esbuild.context({
-  entryPoints: ["main.ts", "styles.css"],
+  entryPoints: ["./src/main.ts", "./src/styles.css"],
   outdir: distDir.toString(),
   bundle: true,
   external: [
@@ -35,6 +36,7 @@ const context = await esbuild.context({
     "@lezer/common",
     "@lezer/highlight",
     "@lezer/lr",
+    ...builtinModules,
   ],
   format: "cjs",
   target: "es2018",
@@ -42,9 +44,17 @@ const context = await esbuild.context({
   sourcemap: prod ? false : "inline",
   treeShaking: true,
   minify: prod,
+  plugins: [
+    {
+      name: "copy-manifest",
+      setup(build) {
+        build.onEnd(async () => {
+          await $`cp ./manifest.json ${distDir}/manifest.json`;
+        });
+      },
+    },
+  ],
 });
-
-await $`cp ./manifest.json ${distDir}/manifest.json`;
 
 if (prod) {
   await context.rebuild();
