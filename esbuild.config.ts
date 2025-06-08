@@ -9,7 +9,7 @@ const pluginName = rootDir.basename().replace(/^obsidian-?/, "");
 const vaultDir = rootDir.join(`vault-for-${pluginName}`);
 if (!vaultDir.existsSync()) {
   await $`git clone --depth 1 https://github.com/kepano/kepano-obsidian.git ${vaultDir}`;
-  await $`echo ${vaultDir.basename()} >> .gitignore`;
+  await $`rm -rf ${vaultDir.join(".git")}`;
 }
 
 const distDir = prod
@@ -36,6 +36,7 @@ const context = await esbuild.context({
     "@lezer/common",
     "@lezer/highlight",
     "@lezer/lr",
+    // for desktop only plugins
     ...builtinModules,
   ],
   format: "cjs",
