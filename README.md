@@ -55,7 +55,10 @@ VSCode
   },
   "[yaml]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
-  }
+  },
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true
 }
 ```
 
