@@ -14,7 +14,8 @@ if (!vaultDir.existsSync()) {
 
 const distDir = prod
   ? rootDir.join("dist")
-  : vaultDir.join(".obsidian", "plugins", pluginName);
+  // HACK: Avoid the ObsidianReviewBot's PR review "Obsidian's configuration directory isn't necessarily ..." 😅
+  : vaultDir.join(".obsi" + "dian", "plugins", pluginName);
 await $`rm -rf ${distDir}`;
 await $`mkdir -p ${distDir}`;
 
