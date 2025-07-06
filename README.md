@@ -8,7 +8,7 @@ You can use [Deno] for almost everything in development!
 - Formatter: **Deno**
 - Linter: **Deno**
 - Type Checker: **Deno**
-- Bundler: **esbuild** (`deno bundle` is now deprecated 😅)
+- Bundler: **esbuild** (`deno bundle` is back in v2.4, but lack of features)
 
 See [obsidianmd/obsidian-sample-plugin] for details.
 
