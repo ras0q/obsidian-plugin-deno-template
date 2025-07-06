@@ -34,7 +34,7 @@ See [obsidianmd/obsidian-sample-plugin] for details.
 
 ### IDE Integration
 
-VSCode
+VSCode / Cursor
 
 ```json:settings.json
 {
@@ -63,11 +63,9 @@ VSCode
 
 ## Release
 
-1. Update the version in `manifest.json`
-2. Run `deno task build`, which will:
-   - Build the plugin to `./dist`
-3. Commit and push the changes to GitHub
-4. Run `gh release create ./dist/main.js ./dist/manifest.json ./dist/styles.css`
+```bash
+deno task bump [patch | minor | major]
+```
 
 [Obsidian]: https://obsidian.md
 [Deno]: https://deno.com

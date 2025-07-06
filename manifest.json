@@ -1,7 +1,7 @@
 {
   "id": "my-feature (DON'T include `obsidian-` prefix)",
   "name": "My Feature (Change id, name, and description!)",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "minAppVersion": "1.7.2",
   "description": "Obsidian plugin template powered with Deno",
   "author": "<Your Name>",

@@ -11,6 +11,7 @@
     "jsr:@std/io@0.225": "0.225.2",
     "jsr:@std/path@1": "1.1.0",
     "jsr:@std/path@^1.1.0": "1.1.0",
+    "jsr:@std/semver@^1.0.5": "1.0.5",
     "npm:esbuild@0.25.5": "0.25.5",
     "npm:obsidian@1.8.7": "1.8.7_@codemirror+state@6.5.2_@codemirror+view@6.37.1"
   },
@@ -60,6 +61,9 @@
     },
     "@std/path@1.1.0": {
       "integrity": "ddc94f8e3c275627281cbc23341df6b8bcc874d70374f75fec2533521e3d6886"
+    },
+    "@std/semver@1.0.5": {
+      "integrity": "529f79e83705714c105ad0ba55bec0f9da0f24d2f726b6cc1c15e505cc2c0624"
     }
   },
   "npm": {
@@ -398,6 +402,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@david/dax@0.43.2",
+      "jsr:@std/semver@^1.0.5",
       "npm:esbuild@0.25.5",
       "npm:obsidian@1.8.7"
     ]
