@@ -18,6 +18,12 @@ jobs:
           deno-version: v2.x
           cache: true
       - run: deno task build
+      - uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: |
+            dist/main.js
+            dist/manifest.json
+            dist/styles.css
       - run: |
           tag="${GITHUB_REF#refs/tags/}"
           gh release create "$tag" \
