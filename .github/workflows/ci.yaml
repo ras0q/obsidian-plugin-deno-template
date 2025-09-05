@@ -20,3 +20,4 @@ jobs:
       #       It is expected that this step fails in the template.
       #       Once it is replaced, please delete this comment.
       - run: deno task check
+        if: github.repository != 'ras0q/obsidian-plugin-deno-template'
