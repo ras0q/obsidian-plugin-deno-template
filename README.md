@@ -6,7 +6,7 @@ You can use [Deno] for almost everything in development!
 
 - Runtime: **Deno**
 - Formatter: **Deno**
-- Linter: **Deno**
+- Linter: **Deno** + **ESLint** (with `eslint-plugin-obsidianmd`)
 - Type Checker: **Deno**
 - Bundler: **esbuild** (`deno bundle` is back in v2.4, but lack of features)
 

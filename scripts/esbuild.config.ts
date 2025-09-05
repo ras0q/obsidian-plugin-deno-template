@@ -1,10 +1,11 @@
 import { builtinModules } from "node:module";
 import esbuild from "esbuild";
 import $ from "@david/dax";
+import process from "node:process";
 
-const prod = Deno.args[0] === "production";
+const prod = process.argv[2] === "production";
 
-const rootDir = $.path(import.meta.dirname!).parent()!;
+const rootDir = $.path(process.cwd()).parent()!;
 const pluginName = rootDir.basename().replace(/^obsidian-?/, "");
 const vaultDir = rootDir.join(`vault-for-${pluginName}`);
 if (!vaultDir.existsSync()) {
@@ -61,7 +62,7 @@ const context = await esbuild.context({
 
 if (prod) {
   await context.rebuild();
-  Deno.exit(0);
+  process.exit(0);
 } else {
   await context.watch();
 }
