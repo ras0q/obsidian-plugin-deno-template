@@ -5,7 +5,7 @@ import process from "node:process";
 
 const prod = process.argv[2] === "production";
 
-const rootDir = $.path(process.cwd()).parent()!;
+const rootDir = $.path(import.meta.dirname!).parent()!;
 const pluginName = rootDir.basename().replace(/^obsidian-?/, "");
 const vaultDir = rootDir.join(`vault-for-${pluginName}`);
 if (!vaultDir.existsSync()) {
