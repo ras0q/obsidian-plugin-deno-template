@@ -23,7 +23,7 @@
     "build": "deno -A ./scripts/esbuild.config.ts production",
     "dev": "deno -A ./scripts/esbuild.config.ts",
     "check": "deno check . && deno fmt --check . && deno lint . && eslint ./src",
-    "fix": "deno check . && deno fmt . && deno lint --fix . ",
+    "fix": "deno check . && deno fmt . && deno lint --fix . && eslint --fix ./src",
     "bump": "deno -A ./scripts/bump-version.ts"
   }
 }
