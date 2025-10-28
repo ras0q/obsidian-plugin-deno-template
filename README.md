@@ -1,8 +1,8 @@
 # Obsidian Plugin Template (with Deno)
 
-This is a sample plugin for [Obsidian].
+This is a sample plugin for [Obsidian](https://obsidian.md).
 
-You can use [Deno] for almost everything in development!
+You can use [Deno](https://deno.com) for almost everything in development!
 
 - Runtime: **Deno**
 - Formatter: **Deno**
@@ -10,7 +10,9 @@ You can use [Deno] for almost everything in development!
 - Type Checker: **Deno**
 - Bundler: **esbuild** (`deno bundle` is back in v2.4, but lack of features)
 
-See [obsidianmd/obsidian-sample-plugin] for details.
+See
+[obsidianmd/obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin)
+for details.
 
 ## Setup
 
@@ -25,49 +27,6 @@ See [obsidianmd/obsidian-sample-plugin] for details.
 
 ## Development
 
-1. Install [Deno]
-2. Run `deno task dev`, which will:
-   - Clone the [sample vault] to `./vault-for-my-feature`
-   - Build the plugin with live reload
-3. Open the sample vault in Obsidian
-4. Enable the plugin in Obsidian settings
+Want to contribute to this repository? Thank you!
 
-### IDE Integration
-
-VSCode / Cursor
-
-```json:settings.json
-{
-  "[css]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "deno.enable": true,
-  "deno.lint": true
-}
-```
-
-## Release
-
-```bash
-deno task bump [patch | minor | major]
-```
-
-[Obsidian]: https://obsidian.md
-[Deno]: https://deno.com
-[obsidianmd/obsidian-sample-plugin]: https://github.com/obsidianmd/obsidian-sample-plugin
-[sample vault]: https://github.com/kepano/kepano-obsidian
+Please see [CONTRIBUTING.md](./CONTRIBUTING.md).
