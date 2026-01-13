@@ -21,7 +21,7 @@ await $`rm -rf ${distDir}`;
 await $`mkdir -p ${distDir}`;
 
 const context = await esbuild.context({
-  entryPoints: ["./src/main.ts", "./src/styles.css"],
+  entryPoints: ["./src/main.ts"],
   outdir: distDir.toString(),
   bundle: true,
   external: [
@@ -39,8 +39,8 @@ const context = await esbuild.context({
     "@lezer/highlight",
     "@lezer/lr",
     // for desktop only plugins
-    ...builtinModules,
-    ...builtinModules.map((m) => `node:${m}`),
+    ...(builtinModules as string[]),
+    ...(builtinModules as string[]).map((m) => `node:${m}`),
   ],
   format: "cjs",
   target: "es2018",
@@ -53,6 +53,7 @@ const context = await esbuild.context({
       name: "copy-manifest",
       setup(build) {
         build.onEnd(async () => {
+          await $`cp ./src/styles.css ${distDir}/styles.css`;
           await $`cp ./manifest.json ${distDir}/manifest.json`;
         });
       },
