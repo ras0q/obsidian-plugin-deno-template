@@ -14,7 +14,6 @@
 		"@std/semver": "jsr:@std/semver@1.0.7",
 		"esbuild": "npm:esbuild@0.27.2",
 		"eslint-plugin-obsidianmd": "npm:eslint-plugin-obsidianmd@0.1.9",
-		"globals": "npm:globals@17.0.0",
 		"obsidian": "npm:obsidian@1.11.4",
 		"oxlint": "npm:oxlint@1.39.0"
 	},

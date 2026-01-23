@@ -16,7 +16,6 @@
     "jsr:@std/semver@1.0.7": "1.0.7",
     "npm:esbuild@0.27.2": "0.27.2",
     "npm:eslint-plugin-obsidianmd@0.1.9": "0.1.9_@eslint+js@9.39.2_@eslint+json@0.14.0_eslint@9.39.2_obsidian@1.11.4__@codemirror+state@6.5.0__@codemirror+view@6.38.6_typescript-eslint@8.53.0__eslint@9.39.2__typescript@5.4.5__@typescript-eslint+parser@8.53.0___eslint@9.39.2___typescript@5.4.5_typescript@5.4.5",
-    "npm:globals@17.0.0": "17.0.0",
     "npm:obsidian@1.11.4": "1.11.4_@codemirror+state@6.5.0_@codemirror+view@6.38.6",
     "npm:oxlint@1.39.0": "1.39.0"
   },
@@ -1285,9 +1284,6 @@
     "globals@15.15.0": {
       "integrity": "sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg=="
     },
-    "globals@17.0.0": {
-      "integrity": "sha512-gv5BeD2EssA793rlFWVPMMCqefTlpusw6/2TbAVMy0FzcG8wKJn4O+NqJ4+XWmmwrayJgw5TzrmWjFgmz1XPqw=="
-    },
     "globalthis@1.0.4": {
       "integrity": "sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==",
       "dependencies": [
@@ -2256,7 +2252,6 @@
       "jsr:@std/semver@1.0.7",
       "npm:esbuild@0.27.2",
       "npm:eslint-plugin-obsidianmd@0.1.9",
-      "npm:globals@17.0.0",
       "npm:obsidian@1.11.4",
       "npm:oxlint@1.39.0"
     ]
