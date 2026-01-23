@@ -11,11 +11,11 @@
 	],
 	"imports": {
 		"@david/dax": "jsr:@david/dax@0.44.2",
-		"@std/semver": "jsr:@std/semver@1.0.7",
+		"@std/semver": "jsr:@std/semver@1.0.8",
 		"esbuild": "npm:esbuild@0.27.2",
 		"eslint-plugin-obsidianmd": "npm:eslint-plugin-obsidianmd@0.1.9",
 		"obsidian": "npm:obsidian@1.11.4",
-		"oxlint": "npm:oxlint@1.39.0"
+		"oxlint": "npm:oxlint@1.41.0"
 	},
 	"nodeModulesDir": "auto",
 	"tasks": {
