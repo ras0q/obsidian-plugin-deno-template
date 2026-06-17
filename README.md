@@ -20,7 +20,9 @@ for details.
 
 1. Create a new repository `<yourname>/obsidian-my-feature` from this template
 2. Clone the repository
-3. Rename variables in `manifest.json` and `main.ts`
+3. Add `LICENSE`
+   - Shortcut: `gh repo license view mit | sed "s/\[year\] \[fullname\]/$(date +%Y) YOURNAME/" > LICENSE`
+4. Rename variables in `manifest.json` and `main.ts`
    - `id` should be `my-feature` (DON'T include `obsidian-` prefix)
    - `name` should be `My Feature`
    - The plugin class name should be `MyFeaturePlugin`
